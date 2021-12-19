@@ -6,8 +6,11 @@ const initialState ={
     total : 0,
     checkout : false
 }
+
+
 const cartReducer = (state , action) => {
-    switch(action.payload){
+    console.log(state)
+    switch(action.type){
             case "ADD_ITEM" :
                 if(!state.selectedItems.find(item => item.id === action.payload.id)){
                 state.selectedItems.push({
